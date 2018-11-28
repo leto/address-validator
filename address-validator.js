@@ -17,8 +17,8 @@ function isValidAddress(coin, address) {
       return "zc" + base58(93);
   }
   var sapling = function () {
-      // zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
-      return "zs" + base58(75);
+// zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
+      return "zs" + base58(76);
   }
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
@@ -70,11 +70,11 @@ function isValidAddress(coin, address) {
   var regex = coinRegexen[coin];
   if (regex) {
      // validate
-     log("found coin regex: " + regex);
+     log(coin + ": found coin regex: " + regex);
      if (regex.test(address)) {
         return true;
      } else {
-        log("did not match regex");
+        log(coin + ": did not match regex");
         // Rules which are not solely regex-based
         if (coin == "BTC") {
             // validate bech32
@@ -82,7 +82,7 @@ function isValidAddress(coin, address) {
         return false;
      }
   } else {
-    log("no coin regex");
+    log(coin+": no coin regex");
     return false;
   }
   return false;
