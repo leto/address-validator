@@ -21,9 +21,17 @@ function isValidAddress(coin, address) {
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
   }
-  var AC = [
+
+  var assets = [
+    "AXO", "BET", "BNTN", "BOTS", "BTCH",
+    "CCL", "CEAL", "CHAIN", "COQUI", "DEX",
+    "DION", "DSEC", "EQL", "ETOMIC", "GLXT",
+    "HODL", "JUMBLR", "KMDICE", "KV", "MESH",
+    "MGNX", "MGW", "MNZ", "MSHARK", "OOT",
+    "PANGEA", "PGT", "PIRATE", "PIZZA", "PRLPAY",
+    "REVS", "SUPERNET", "ZILLA",
   ];
-  // each coin should have 1 single regex matching all valid addresses
+
   var coinRegexen = {
     "BTC" :  new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
     //LeVG2zJrVGobVRE2B3Vtqo5Sgpa5bK7W1b
