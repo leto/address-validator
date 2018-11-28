@@ -33,6 +33,8 @@ function isValidAddress(coin, address) {
     "ETC" : new RegExp("^(0x)?[0-9A-Fa-f]{40}$"),
     //XdeGcsTPh4PW8saqJM1xe7EPJ1zrxbsoPE
     "DASH":  addr("X",33),
+    "GAME":  addr("G",33),
+    "EMC2":  addr("E",33),
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
     "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),

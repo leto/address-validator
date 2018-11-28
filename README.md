@@ -19,3 +19,5 @@ Example:
   * ETH
   * ETC
   * DASH
+  * GAME
+  * EMC2
