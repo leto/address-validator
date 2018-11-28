@@ -32,6 +32,12 @@ function isValidAddress(coin, address) {
     "REVS", "SUPERNET", "ZILLA",
   ];
 
+  // we assume all KMD asset chains have the same address format
+  // as KMD, exceptions can be listed if they exist
+  if (assets.indexOf(coin) >= 0) {
+      coin = "KMD";
+  }
+
   var coinRegexen = {
     "BTC" :  new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
     //LeVG2zJrVGobVRE2B3Vtqo5Sgpa5bK7W1b
