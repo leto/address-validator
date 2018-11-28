@@ -8,12 +8,14 @@ Example:
 
 # Supported coins
 
-    * BTC
-    * LTC
-    * KMD
-    * HUSH
-    * ZEC
-    * PIVX
-    * ETH
-    * ETC
-    * DASH
+  * BTC
+  * LTC
+  * KMD
+  * HUSH
+  * VRSC
+  * ZEC
+  * ZCL
+  * PIVX
+  * ETH
+  * ETC
+  * DASH

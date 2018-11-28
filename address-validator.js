@@ -39,6 +39,7 @@ function isValidAddress(coin, address) {
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
+    "ZCL":   new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
   };
 
   var regex = coinRegexen[coin];
