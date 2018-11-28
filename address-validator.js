@@ -25,17 +25,15 @@ function isValidAddress(coin, address) {
   ];
   // each coin should have 1 single regex matching all valid addresses
   var coinRegexen = {
-    // "HUSH" : /^(zc{93}|t1[a-hjkmnp-z1-9]{33})$/i,
-    //"HUSH" : new RegExp("^(zc" + base58(93) + ")|(t1" + base58(33) + ")$"),
     "BTC" :  new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
     //LeVG2zJrVGobVRE2B3Vtqo5Sgpa5bK7W1b
     "LTC" :  addr("L",33),
     //0x5f1602462af75FaEd1Ff37B4a1B8Cd05608Fd0F0
-    "ETH" : new RegExp("^(0x)?[0-9a-f]{40}$"),
+    "ETH" : new RegExp("^(0x)?[0-9A-Fa-f]{40}$"),
+    "ETC" : new RegExp("^(0x)?[0-9A-Fa-f]{40}$"),
     //XdeGcsTPh4PW8saqJM1xe7EPJ1zrxbsoPE
     "DASH":  addr("X",33),
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
-    //"PIVX" : new RegExp("^(D" + base58(33) + ")$"),
     "PIVX":  addr("D",33),
     "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
@@ -51,6 +49,10 @@ function isValidAddress(coin, address) {
         return true;
      } else {
         log("did not match regex");
+        // Rules which are not solely regex-based
+        if (coin == "BTC") {
+            // validate bech32
+        }
         return false;
      }
   } else {
