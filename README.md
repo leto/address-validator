@@ -21,9 +21,9 @@ for production use.
 # Supported coins
 
   * BTC (bech32 not supported yet)
-  * LTC
   * KMD (and asset chains)
   * HUSH
+  * LTC
   * VRSC
   * ZEC
   * ZCL
@@ -33,6 +33,7 @@ for production use.
   * DASH
   * GAME
   * EMC2
+  * BTG
 
 # Supported Address Types
 

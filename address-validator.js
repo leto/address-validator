@@ -23,6 +23,9 @@ function isValidAddress(coin, address) {
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
   }
+  var addr2 = function (p1,p2,num) {
+      return new RegExp("^(" + p1 + base58(num) + ")|(" + p2 + base58(num) + ")$");
+  }
 
   var assets = [
     "AXO", "BET", "BNTN", "BOTS", "BTCH",
@@ -42,6 +45,9 @@ function isValidAddress(coin, address) {
 
   var coinRegexen = {
     "BTC" :  new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
+    //GK18bp4UzC6wqYKKNLkaJ3hzQazTc3TWBw
+    //AZoZwSr3QraTKYiqgLnnZciN1uPeFXcVnN
+    "BTG" : addr2("G","A",33),
     //LeVG2zJrVGobVRE2B3Vtqo5Sgpa5bK7W1b
     "LTC" :  addr("L",33),
     //0x5f1602462af75FaEd1Ff37B4a1B8Cd05608Fd0F0
@@ -54,6 +60,7 @@ function isValidAddress(coin, address) {
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
     "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
+    // sapling activates dec 15th
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
