@@ -35,6 +35,13 @@ for production use.
   * EMC2
   * BTG
 
+# Will You Add Support For Coin X?
+
+Yes, probably! Make it easy, and submit a Github Issue, with the coin ticker and example addresses of each type (normal, multisig, shielded, etc..).
+That makes it almost trivial to add a new coin.
+
+Even better: Patches Welcome! Please submit PR's to the master branch.
+
 # Supported Address Types
 
 Both normal and multisig addresses are supported for coins that have
