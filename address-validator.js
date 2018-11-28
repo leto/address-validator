@@ -13,10 +13,12 @@ function isValidAddress(coin, address) {
     return chars + "{" + num + "}";
   }
   var sprout = function () {
+      // zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC
       return "zc" + base58(93);
   }
   var sapling = function () {
-      return "zs" + base58(7777);
+      // zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
+      return "zs" + base58(75);
   }
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
