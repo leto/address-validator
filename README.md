@@ -20,7 +20,7 @@ for production use.
 
 # Supported coins
 
-  * BTC
+  * BTC (bech32 not supported yet)
   * LTC
   * KMD (and asset chains)
   * HUSH
@@ -33,6 +33,15 @@ for production use.
   * DASH
   * GAME
   * EMC2
+
+# Supported Address Types
+
+Both normal and multisig addresses are supported for coins that have
+them.
+
+Transparent and shielded addresses are supported, for coins with
+shielded addresses. For Zcash-derived coins, Sprout and Sapling
+addresses are supported.
 
 # License
 
