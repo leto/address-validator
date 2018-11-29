@@ -21,7 +21,7 @@ for production use.
 # Supported coins
 
   * BTC (bech32 not supported yet)
-  * KMD (and asset chains)
+  * KMD (and 30+ asset chains)
   * HUSH
   * LTC
   * VRSC
@@ -34,6 +34,7 @@ for production use.
   * GAME
   * EMC2
   * BTG
+  * DOGE
 
 # Will You Add Support For Coin X?
 
@@ -41,6 +42,10 @@ Yes, probably! Make it easy, and submit a Github Issue, with the coin ticker and
 That makes it almost trivial to add a new coin.
 
 Even better: Patches Welcome! Please submit PR's to the master branch.
+
+# Test Suite
+
+Tests are written with qunit, direcly in the browser: http://duke.leto.net/address-validator/
 
 # Supported Address Types
 
