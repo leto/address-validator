@@ -17,8 +17,9 @@ function isValidAddress(coin, address) {
       return "zc" + base58(93);
   }
   var sapling = function () {
-// zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
-      return "zs" + base58(76);
+  // this is bech32 format, not base58
+  //zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
+      return "zs[a-z0-9]";
   }
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
@@ -59,10 +60,10 @@ function isValidAddress(coin, address) {
     "EMC2":  addr("E",33),
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
-    "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
+    "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
     // sapling activates dec 15th
-    "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
-    "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(34) + ")$"),
+    "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
+    "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
     "ZCL":   new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
   };

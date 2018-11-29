@@ -25,7 +25,13 @@ QUnit.test( "HUSH: invalid addresses which have correct prefixes", function( ass
 });
 
 QUnit.test( "KMD: valid transparent addresses", function( assert ) {
+  // todo: multisig
   assert.ok( isValidAddress("KMD", "RNJmgYaFF5DbnrNUX6pMYz9rcnDKC2tuAc") , "Passed!" );
+});
+
+QUnit.test( "HUSH: valid transparent addresses", function( assert ) {
+  assert.ok( isValidAddress("HUSH", "t1JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "Passed!" );
+  assert.ok( isValidAddress("HUSH", "t3JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "Passed!" );
 });
 
 QUnit.test( "Basic valid transparent addresses", function( assert ) {
@@ -36,18 +42,18 @@ QUnit.test( "Basic valid transparent addresses", function( assert ) {
   assert.ok( isValidAddress("BTG", "AMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
 });
 
-QUnit.test( "Sapling shielded addresses: ZEC", function( assert ) {
+QUnit.test( "ZEC: Sapling shielded addresses", function( assert ) {
   assert.ok( isValidAddress("ZEC",
         "zs18tu5wr4hlyg7m9tlkl0nhj65jmyxmvufcjpve2e6ada8k5vwn0cdfp4v0luxnwc8fa26szrfaas") , "Passed!" );
 });
 
-QUnit.test( "Sprout shielded addresses: ZEC", function( assert ) {
+QUnit.test( "ZEC: Sprout shielded addresses", function( assert ) {
   assert.ok( isValidAddress("ZEC",
         "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
         "Passed!" );
 });
 
-QUnit.test( "Sprout shielded addresses: HUSH", function( assert ) {
+QUnit.test( "HUSH: Sprout shielded addresses", function( assert ) {
   assert.ok( isValidAddress("HUSH",
         "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
         "Passed!" );
