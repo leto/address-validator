@@ -40,6 +40,7 @@ QUnit.test( "Basic valid transparent addresses", function( assert ) {
   assert.ok( isValidAddress("LTC", "LMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
   assert.ok( isValidAddress("BTG", "GMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
   assert.ok( isValidAddress("BTG", "AMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
+  assert.ok( isValidAddress("DOGE", "DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P") , "Passed!" );
 });
 
 QUnit.test( "ZEC: Sapling shielded addresses", function( assert ) {

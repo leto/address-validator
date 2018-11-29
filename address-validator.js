@@ -29,7 +29,7 @@ function isValidAddress(coin, address) {
   }
 
   var assets = [
-    "AXO", "BET", "BNTN", "BOTS", "BTCH",
+    "AXO", "ARRR", "BET", "BNTN", "BOTS", "BTCH",
     "CCL", "CEAL", "CHAIN", "COQUI", "DEX",
     "DION", "DSEC", "EQL", "ETOMIC", "GLXT",
     "HODL", "JUMBLR", "KMDICE", "KV", "MESH",
@@ -65,7 +65,9 @@ function isValidAddress(coin, address) {
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
-    "ZCL":   new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
+    "ZCL" :  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
+    //DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P
+    "DOGE":  addr2("D","9",33),
   };
 
   var regex = coinRegexen[coin];
