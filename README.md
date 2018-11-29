@@ -16,7 +16,9 @@ for production use.
 
 # Examples
 
-    isValidAddress("BTC","notvalid") # returns false
+    isValidAddress("BTC","notvalid")                               # false
+    isValidAddress("HUSH", "t1JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox")  # true
+    isValidAddress("KMD", "RNJmgYaFF5DbnrNUX6pMYz9rcnDKC2tuAc")    # true
 
 # Supported coins
 
@@ -45,7 +47,7 @@ Even better: Patches Welcome! Please submit PR's to the master branch.
 
 # Test Suite
 
-Tests are written with qunit, direcly in the browser: http://duke.leto.net/address-validator/
+Tests are written with [qunit](http://qunitjs.com/), and run direcly in the browser: http://duke.leto.net/address-validator/
 
 # Supported Address Types
 
@@ -55,6 +57,13 @@ them.
 Transparent and shielded addresses are supported, for coins with
 shielded addresses. For Zcash-derived coins, Sprout and Sapling
 addresses are supported.
+
+# How can I detect only a valid *transparent* or *shielded* or *multisig* address?
+
+Currently that is not directly supported. It is recommended that you call
+`isValidAddress` for validity, and then also do a prefix check for the address
+type.
+
 
 # License
 
