@@ -28,6 +28,10 @@ function isValidAddress(coin, address) {
       return new RegExp("^(" + p1 + base58(num) + ")|(" + p2 + base58(num) + ")$");
   }
 
+  var sprout_addr2 = function (p1,p2,num) {
+      return new RegExp("^(" + sprout() + ")|(" + p1 + base58(num) + ")|(" + p2 + base58(num) + ")$");
+  }
+
   var assets = [
     "AXO", "ARRR", "BET", "BNTN", "BOTS", "BTCH",
     "CCL", "CEAL", "CHAIN", "COQUI", "DEX",
@@ -60,7 +64,7 @@ function isValidAddress(coin, address) {
     "EMC2":  addr("E",33),
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
-    "HUSH":  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
+    "HUSH":  sprout_addr2("t1","t3", 33),
     // sapling activates dec 15th
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
@@ -69,7 +73,7 @@ function isValidAddress(coin, address) {
     //DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P
     "DOGE":  addr2("D","9",33),
     //s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N
-    "XSG":   addr2("s1","s3",33),
+    "XSG":   sprout_addr2("s1","s3",33),
   };
 
   var regex = coinRegexen[coin];
