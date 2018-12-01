@@ -30,13 +30,13 @@ QUnit.test( "KMD: valid transparent addresses", function( assert ) {
 });
 
 QUnit.test( "HUSH: valid transparent addresses", function( assert ) {
-  assert.ok( isValidAddress("HUSH", "t1JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "Passed!" );
-  assert.ok( isValidAddress("HUSH", "t3JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "Passed!" );
+  assert.ok( isValidAddress("HUSH", "t1JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "normal" );
+  assert.ok( isValidAddress("HUSH", "t3JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "multisig" );
 });
 
 QUnit.test( "XSG: valid transparent addresses", function( assert ) {
-  assert.ok( isValidAddress("XSG", "s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N"), "Passed!");
-  assert.ok( isValidAddress("XSG", "s3TKWLar6bZEHppF4ZR1MbPuBfe33a1bHX9"), "Passed!");
+  assert.ok( isValidAddress("XSG", "s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N"), "normal");
+  assert.ok( isValidAddress("XSG", "s3TKWLar6bZEHppF4ZR1MbPuBfe33a1bHX9"), "multisig");
 });
 
 QUnit.test( "Basic valid transparent addresses", function( assert ) {
@@ -46,6 +46,7 @@ QUnit.test( "Basic valid transparent addresses", function( assert ) {
   assert.ok( isValidAddress("BTG", "GMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
   assert.ok( isValidAddress("BTG", "AMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
   assert.ok( isValidAddress("DOGE", "DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P") , "Passed!" );
+  assert.ok( isValidAddress("RVN", "RCFoGjixZAmQ8nD23vMqkYvYpiGpa8PmSY") , "Passed!" );
 });
 
 QUnit.test( "ZEC: Sapling shielded addresses", function( assert ) {

@@ -74,6 +74,8 @@ function isValidAddress(coin, address) {
     "DOGE":  addr2("D","9",33),
     //s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N
     "XSG":   sprout_addr2("s1","s3",33),
+    //RCFoGjixZAmQ8nD23vMqkYvYpiGpa8PmSY
+    "RVN": addr("R",33),
   };
 
   var regex = coinRegexen[coin];
