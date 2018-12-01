@@ -23,20 +23,22 @@ for production use.
 # Supported coins
 
   * BTC (bech32 not supported yet)
-  * KMD (and 30+ asset chains)
-  * HUSH
-  * LTC
-  * VRSC
-  * ZEC
-  * ZCL
-  * PIVX
-  * ETH
-  * ETC
-  * DASH
-  * GAME
-  * EMC2
   * BTG
+  * DASH
   * DOGE
+  * EMC2
+  * ETC
+  * ETH
+  * GAME
+  * HUSH
+  * KMD (and 30+ asset chains)
+  * LTC
+  * PIVX
+  * RVN
+  * VRSC
+  * XSG
+  * ZCL
+  * ZEC
 
 # Will You Add Support For Coin X?
 
