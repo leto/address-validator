@@ -34,6 +34,11 @@ QUnit.test( "HUSH: valid transparent addresses", function( assert ) {
   assert.ok( isValidAddress("HUSH", "t3JTXxWyBrxdWNTaNa5gYPPfpJkhqESvyox") , "Passed!" );
 });
 
+QUnit.test( "XSG: valid transparent addresses", function( assert ) {
+  assert.ok( isValidAddress("XSG", "s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N"), "Passed!");
+  assert.ok( isValidAddress("XSG", "s3TKWLar6bZEHppF4ZR1MbPuBfe33a1bHX9"), "Passed!");
+});
+
 QUnit.test( "Basic valid transparent addresses", function( assert ) {
   assert.ok( isValidAddress("PIVX", "DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );
   assert.ok( isValidAddress("DASH", "XMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54") , "Passed!" );

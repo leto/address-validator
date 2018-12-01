@@ -68,6 +68,8 @@ function isValidAddress(coin, address) {
     "ZCL" :  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
     //DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P
     "DOGE":  addr2("D","9",33),
+    //s1V5MGQC87mmYEEYVYBHwDSgogndkiXte4N
+    "XSG":   addr2("s1","s3",33),
   };
 
   var regex = coinRegexen[coin];
