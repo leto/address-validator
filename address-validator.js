@@ -65,9 +65,9 @@ function isValidAddress(coin, address) {
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
     "HUSH":  sprout_addr2("t1","t3", 33),
-    // sapling activates dec 15th
-    "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
-    "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")$"),
+    // sapling activates dec 15th, sprout deprecates at ...
+    "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
+    "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
     "ZCL" :  new RegExp("^(" + sprout() + ")|(t1" + base58(33) + ")$"),
     //DJ1BsBHrGaJaEcWYFGPon6a4tQqEx9yL9P

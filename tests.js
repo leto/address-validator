@@ -25,8 +25,13 @@ QUnit.test( "HUSH: invalid addresses which have correct prefixes", function( ass
 });
 
 QUnit.test( "KMD: valid transparent addresses", function( assert ) {
-  // todo: multisig
-  assert.ok( isValidAddress("KMD", "RNJmgYaFF5DbnrNUX6pMYz9rcnDKC2tuAc") , "Passed!" );
+  assert.ok( isValidAddress("KMD", "RNJmgYaFF5DbnrNUX6pMYz9rcnDKC2tuAc") , "normal" );
+  assert.ok( isValidAddress("KMD", "bFn413mChN4LPydzFiTxoXC1NwMMinzYsP") , "multisig" );
+});
+
+QUnit.test( "VRSC: valid transparent addresses", function( assert ) {
+  assert.ok( isValidAddress("KMD", "RNJmgYaFF5DbnrNUX6pMYz9rcnDKC2tuAc") , "normal" );
+  assert.ok( isValidAddress("KMD", "bFn413mChN4LPydzFiTxoXC1NwMMinzYsP") , "multisig" );
 });
 
 QUnit.test( "HUSH: valid transparent addresses", function( assert ) {
