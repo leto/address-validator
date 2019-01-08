@@ -55,8 +55,8 @@ QUnit.test( "Basic valid transparent addresses", function( assert ) {
 });
 
 QUnit.test( "ZEC: Sapling shielded addresses", function( assert ) {
-  assert.ok( isValidAddress("ZEC",
-        "zs18tu5wr4hlyg7m9tlkl0nhj65jmyxmvufcjpve2e6ada8k5vwn0cdfp4v0luxnwc8fa26szrfaas") , "Passed!" );
+  assert.ok( isValidAddress("ZEC", "zs18tu5wr4hlyg7m9tlkl0nhj65jmyxmvufcjpve2e6ada8k5vwn0cdfp4v0luxnwc8fa26szrfaas") , "Passed!" );
+  assert.ok( isValidAddress("ZEC", "zs1e9u50cezk52gvv06v7xu3xssg5ypncc2apwngmhtwe96sqvhlca97p9wjyaxuatrs8m7shjf273") , "Passed!" );
 });
 
 QUnit.test( "ZEC: Sprout shielded addresses", function( assert ) {
