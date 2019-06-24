@@ -19,7 +19,7 @@ function isValidAddress(coin, address) {
   var sapling = function () {
   // this is bech32 format, not base58
   //zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
-      return "zs[a-z0-9]{75}";
+      return "zs1[a-z0-9]{75}";
   }
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
