@@ -39,7 +39,7 @@ function isValidAddress(coin, address) {
     "HODL", "JUMBLR", "KMDICE", "KV", "K64", "MESH",
     "MGNX", "MGW", "MNZ", "MSHARK", "OOT",
     "PANGEA", "PGT", "PIRATE", "PIZZA", "PRLPAY",
-    "REVS", "SUPERNET", "ZILLA",
+    "REVS", "SUPERNET", "ZEXO", "ZILLA",
   ];
 
   // we assume all KMD asset chains have the same address format
@@ -68,8 +68,7 @@ function isValidAddress(coin, address) {
     "PIVX":  addr("D",33),
     // NOTE: support old HUSH v2 address validation with HUSH2 fake ticker
     "HUSH2": sprout_addr2("t1","t3", 33),
-    "HUSH":  new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
-    // sapling activates dec 15th, sprout deprecates at ...
+    "HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
