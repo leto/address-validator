@@ -36,7 +36,7 @@ function isValidAddress(coin, address) {
     "AXO", "ARRR", "BET", "BNTN", "BOTS", "BTCH",
     "CCL", "CEAL", "CHAIN", "COQUI", "DEX",
     "DION", "DSEC", "EQL", "ETOMIC", "GLXT",
-    "HODL", "JUMBLR", "KMDICE", "KV", "MESH",
+    "HODL", "JUMBLR", "KMDICE", "KV", "K64", "MESH",
     "MGNX", "MGW", "MNZ", "MSHARK", "OOT",
     "PANGEA", "PGT", "PIRATE", "PIZZA", "PRLPAY",
     "REVS", "SUPERNET", "ZILLA",
@@ -49,7 +49,9 @@ function isValidAddress(coin, address) {
   }
 
   var coinRegexen = {
-    "BTC" :  new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
+    // NOTE: technically sprout addrs are valid but no longer can receive funds
+    "ARRR": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
+    "BTC" : new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
     //GK18bp4UzC6wqYKKNLkaJ3hzQazTc3TWBw
     //AZoZwSr3QraTKYiqgLnnZciN1uPeFXcVnN
     "BTG" : addr2("G","A",33),
@@ -64,7 +66,9 @@ function isValidAddress(coin, address) {
     "EMC2":  addr("E",33),
     //DMkYTxdS4a6gWqxcDy4xkNcSAbFpWR9T54
     "PIVX":  addr("D",33),
-    "HUSH":  sprout_addr2("t1","t3", 33),
+    // NOTE: support old HUSH v2 address validation with HUSH2 fake ticker
+    "HUSH2": sprout_addr2("t1","t3", 33),
+    "HUSH":  new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
     // sapling activates dec 15th, sprout deprecates at ...
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
