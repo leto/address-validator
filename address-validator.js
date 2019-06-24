@@ -19,7 +19,7 @@ function isValidAddress(coin, address) {
   var sapling = function () {
   // this is bech32 format, not base58
   //zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
-      return "zs[a-z0-9]";
+      return "zs[a-z0-9]{75}";
   }
   var addr = function (prefix,num) {
       return new RegExp("^(" + prefix + base58(num) + ")$");
@@ -69,7 +69,8 @@ function isValidAddress(coin, address) {
     // NOTE: support old HUSH v2 address validation with HUSH2 fake ticker
     "HUSH2": sprout_addr2("t1","t3", 33),
     // Sprout addresses have never been valid on HUSH v3 mainnet
-    "HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
+    //"HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
+    "HUSH": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
