@@ -69,8 +69,8 @@ function isValidAddress(coin, address) {
     // NOTE: support old HUSH v2 address validation with HUSH2 fake ticker
     "HUSH2": sprout_addr2("t1","t3", 33),
     // Sprout addresses have never been valid on HUSH v3 mainnet
-    //"HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
-    "HUSH": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
+    "HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
+    //"HUSH": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "ZEC" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(t1" + base58(33) + ")|(t3" + base58(33) + ")$"),
@@ -88,6 +88,7 @@ function isValidAddress(coin, address) {
      // validate
      log(coin + ": found coin regex: " + regex);
      if (regex.test(address)) {
+        log(coin + ": " + address + " is valid!");
         return true;
      } else {
         log(coin + ": did not match regex");
@@ -95,6 +96,7 @@ function isValidAddress(coin, address) {
         if (coin == "BTC") {
             // validate bech32
         }
+        log(coin + ": " + address + " is NOT valid!");
         return false;
      }
   } else {
