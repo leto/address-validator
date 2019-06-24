@@ -74,6 +74,19 @@ QUnit.test( "ARRR: Sapling shielded addresses", function( assert ) {
   assert.ok( isValidAddress("ARRR", "zs1e9u50cezk52gvv06v7xu3xssg5ypncc2apwngmhtwe96sqvhlca97p9wjyaxuatrs8m7shjf273") , "Passed!" );
 });
 
+QUnit.test( "ARRR: Sprout addresses not considered valid", function( assert ) {
+  assert.notOk( isValidAddress("ARRR",
+        "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
+        "Passed!" );
+});
+
+QUnit.test( "HUSH: Sprout addresses not considered valid", function( assert ) {
+  assert.notOk( isValidAddress("HUSH",
+        "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
+        "Passed!" );
+});
+
+
 
 QUnit.test( "ZEC: Sprout shielded addresses", function( assert ) {
   assert.ok( isValidAddress("ZEC",

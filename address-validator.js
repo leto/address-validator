@@ -49,7 +49,7 @@ function isValidAddress(coin, address) {
   }
 
   var coinRegexen = {
-    // NOTE: technically sprout addrs are valid but no longer can receive funds
+    // NOTE: technically sprout addrs are valid but no longer can receive funds, let's consider invalid
     "ARRR": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
     "BTC" : new RegExp("^(3" + base58(33) + ")|(1" + base58(33) + ")$"),
     //GK18bp4UzC6wqYKKNLkaJ3hzQazTc3TWBw
@@ -68,6 +68,7 @@ function isValidAddress(coin, address) {
     "PIVX":  addr("D",33),
     // NOTE: support old HUSH v2 address validation with HUSH2 fake ticker
     "HUSH2": sprout_addr2("t1","t3", 33),
+    // Sprout addresses have never been valid on HUSH v3 mainnet
     "HUSH" : new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "KMD" :  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
     "VRSC":  new RegExp("^(" + sapling() + ")|(" + sprout() + ")|(R" + base58(33) + ")|(b" + base58(33) + ")$"),
