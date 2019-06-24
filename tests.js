@@ -20,8 +20,8 @@ QUnit.test( "ZEC: invalid addresses which have correct prefixes", function( asse
 });
 
 QUnit.test( "HUSH: invalid addresses which have correct prefixes", function( assert ) {
-  assert.notOk( isValidAddress("HUSH", "t1invalid") , "Passed!" );
-  assert.notOk( isValidAddress("HUSH", "t3yepstillinvalid") , "Passed!" );
+  assert.notOk( isValidAddress("HUSH", "Rinvalid") , "Passed!" );
+  assert.notOk( isValidAddress("HUSH", "bt3yepstillinvalid") , "Passed!" );
 });
 
 QUnit.test( "KMD: valid transparent addresses", function( assert ) {
@@ -81,6 +81,9 @@ QUnit.test( "ARRR: Sprout addresses not considered valid", function( assert ) {
 });
 
 QUnit.test( "HUSH: Sprout addresses not considered valid", function( assert ) {
+
+  isValidAddress("HUSH", "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC");
+
   assert.notOk( isValidAddress("HUSH",
         "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
         "Passed!" );
