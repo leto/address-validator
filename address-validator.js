@@ -33,7 +33,7 @@ function isValidAddress(coin, address) {
   }
 
   var assets = [
-    "AXO", "ARRR", "BET", "BNTN", "BOTS", "BTCH",
+    "AXO", "BET", "BNTN", "BOTS", "BTCH",
     "CCL", "CEAL", "CHAIN", "COQUI", "DEX",
     "DION", "DSEC", "EQL", "ETOMIC", "GLXT",
     "HODL", "JUMBLR", "KMDICE", "KV", "K64", "MESH",
