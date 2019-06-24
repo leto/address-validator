@@ -42,12 +42,6 @@ function isValidAddress(coin, address) {
     "REVS", "SUPERNET", "ZEXO", "ZILLA",
   ];
 
-  // we assume all KMD asset chains have the same address format
-  // as KMD, exceptions can be listed if they exist
-  if (assets.indexOf(coin) >= 0) {
-      coin = "KMD";
-  }
-
   var coinRegexen = {
     // NOTE: technically sprout addrs are valid but no longer can receive funds, let's consider invalid
     "ARRR": new RegExp("^(" + sapling() + ")|(R" + base58(33) + ")$"),
@@ -83,7 +77,10 @@ function isValidAddress(coin, address) {
     "RVN": addr("R",33),
   };
 
-  var regex = coinRegexen[coin];
+  // use KMD as a fallback if the coin does not exist
+  // TODO: error if unsupported coin given
+  var regex = coinRegexen[coin] ? coinRegexen[coin] : coinRegexen["KMD"];
+
   if (regex) {
      // validate
      log(coin + ": found coin regex: " + regex);
