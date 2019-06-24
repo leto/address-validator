@@ -99,9 +99,7 @@ function isValidAddress(coin, address) {
         log(coin + ": " + address + " is NOT valid!");
         return false;
      }
-  } else {
-    log(coin+": no coin regex");
-    return false;
   }
+  log(coin+": no coin regex");
   return false;
 }

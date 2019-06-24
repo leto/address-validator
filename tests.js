@@ -86,8 +86,6 @@ QUnit.test( "HUSH: Sprout addresses not considered valid", function( assert ) {
         "Passed!" );
 });
 
-
-
 QUnit.test( "ZEC: Sprout shielded addresses", function( assert ) {
   assert.ok( isValidAddress("ZEC",
         "zcA6qngiR3U7HxYopyTWkaDLwYBd83D5MT7Jb9gpgTzPLMZytzRbtdPP1Syv4RvRgHeoZrJWSask3DyfwXG9DGPMWMvX7aC"),
